@@ -1,4 +1,4 @@
-//代理 test 拦截get
+//代理 改写 拦截get
 let obj = new Proxy({},{
     get:(target,property)=>{
         console.log(target,property)
