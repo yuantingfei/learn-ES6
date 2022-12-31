@@ -11,5 +11,20 @@
  * has() 拦截 propKey in proxy
  * deleteProperty() 拦截 delete   
  * apply() 拦截函数的调用，call，apply
+ * construct() 拦截 new 命令
+ */
+
+/**
+ * 1.deleteProperty()该方法用于拦截delete操作，如果这个方法返回false或者是抛出错误当前属性就被delete命令删除
+2.defineProperty()该方法拦截了Object.defineProperty操作
+3.enumerate()该方法用于拦截for...in循环，注意不可与has()方法弄混（has方法用于拦截in操作符）。
+4.has()该方法用于拦截in操作符
+5.construct()方法用于拦截new命令
+6.getOwnPropertyDescriptor()该方法用于拦截Object.getOwnPropertyDescriptor返回一个属性描述对象或者是undefined。
+7.getPrototypeOf()该方法用于拦截Object.getPrototypeOf()运算符以及一些其他操作。
+8.isExtensible()该方法用于拦截Object.isExtensible操作。
+9.ownKeys()该方法用于拦截Object.keys()操作。
+10.preventExtensions()方法该方法用于拦截Object.preventExtensions()操作。
+11.setPrototypeOf()方法该方法用于拦截Object.setPrototypeOf()操作。
  */
 

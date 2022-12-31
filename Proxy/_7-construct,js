@@ -1,0 +1,11 @@
+//代理 改写 拦截 new 命令
+let obj = new Proxy(function(){
+    console.log(21)
+},{
+    construct:(target,args)=>{
+        console.log(target,args)
+        //如果construct返回的不是对象，就会抛出错误
+        return new target(args)
+    }
+})
+let a = new obj(12)
